@@ -1,29 +1,27 @@
-#include "player.h"
+#include "Player.h"
 
+Player::Player()
+{
+	username = "";
+	score = 0;
+}
 
-player::player() {
-	matchCount = 0;
-	winCount = 0;
+void Player::setUsername(string username)
+{
+	this->username = username;
 }
-player::player(string username, int MatchCount, int WinCount) {
-	matchCount = MatchCount;
-	winCount = WinCount;
+
+void Player::setScore(int score)
+{
+	this->score = score;
 }
-void player::setMatchCount(int match) {
-	matchCount = match;
-}
-int player::getMatchCount() {
-	return matchCount;
-}
-void player::setUsername(string name) {
-	username = name;
-}
-string player::getUsername() {
+
+string Player::getUsername()
+{
 	return username;
 }
-void player::setWinCount(int WinCount) {
-	winCount = WinCount;
-}
-int player::getWinCount() {
-	return winCount;
+
+int Player::getScore()
+{
+	return score;
 }
