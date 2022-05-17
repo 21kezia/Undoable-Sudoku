@@ -1,4 +1,4 @@
-#include "Board.h"
+#include "board.h"
 
 typedef mt19937 RandGenerator;
 RandGenerator rng;
