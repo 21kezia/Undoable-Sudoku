@@ -1,5 +1,5 @@
 #include <iostream>
-#include "GameManager.h"
+#include "gameManager.h"
 
 int main() {
 	Board sudoku;
