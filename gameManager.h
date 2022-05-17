@@ -1,6 +1,6 @@
-#include "Helper.h"
-#include "Invoker.h"
-#include "Player.h"
+#include "helper.h"
+#include "invoker.h"
+#include "player.h"
 
 class GameManager
 {
