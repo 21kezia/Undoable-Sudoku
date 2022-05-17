@@ -1,17 +1,24 @@
-#pragma once
-#include "board.h"
-#include "player.h"
+#include "Helper.h"
+#include "Invoker.h"
+#include "Player.h"
 
-class gameManager
+class GameManager
 {
-	board b;
-	player p;
-	string username;
-	string playBoard[9][9];
-
+private:
+	Board* board;
+	Player* player;
+	Invoker undo;
+	Invoker redo;
 public:
-	gameManager();
-	gameManager(player Player, board Board);
+	GameManager(Board* board, Player* player);
+	void checkWrongCell();
+	void undoAct();
+	void setPlayerUsername();
+	void redoAct();
+	void fillCell(int x, int y, int value);
+	void deleteCell(int x, int y);
 	void play();
-	bool checkWin();
+	void continueGame();
+	void saveFile();
+	void loadFile();
 };
