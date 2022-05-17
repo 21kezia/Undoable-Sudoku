@@ -1,28 +1,42 @@
-#pragma once
-#include <string>
-#include <fstream>
-#include <set>
-#include <iostream>
-using namespace std;
+#include "Helper.h"
+#define GRID_SIZE 9
 
-class board
-{
+//const int GRID_SIZE = 9;
+
+class Board {
 private:
-	char aBoard[9][9] = {};
-	string pBoard[9][9];
+	bool nInRegion(int n, int i, int j);
+	bool nInCol(int n, int j);
 
+	vector<bool> getRegionPossibilities(int i, int j);
+	vector<bool> getColPossibilites(int j);
+	vector<bool> getRowPossibilities(int i);
+
+	void setCellSolved(int i, int j, int n);
+	int checkSolvedCells();
+	void checkRegion(int i, int j);
+	void copySol();
+
+	int grid[GRID_SIZE][GRID_SIZE];
+	int solution[GRID_SIZE][GRID_SIZE];
+	vector<bool> possibles[GRID_SIZE][GRID_SIZE];
+
+	int CELLS_TO_REMOVE = 50;
+	int solution_changes;
 public:
-	board();
-	bool notInRow(char arr[][9], int row);
-	bool notInColumn(char arr[][9], int col);
-	bool notInBox(char arr[][9], int startRow, int startCol);
-	bool isValid(char arr[][9], int row, int col);
-	bool isValidConfig();
-	bool isAvailableAtIndex(int x, int y);
-	bool isEmpty();
-	bool isFull();
-	void setValueAtIndex(int x, int y, char value);
-	char getValueAtIndex(int x, int y);
-	void boardLoader(string fileName);
-	void displayBoard();
+	Board();
+	~Board() = default;
+
+	bool isSolRight();
+	void difficulty(int n);
+	void generate();
+	bool solve();
+	void draw();
+	void drawSolution();
+	int getCellSolValue(int x, int y);
+	int getCellValue(int x, int y);
+	void fillCell(int x, int y, int z);
+	void deleteCell(int x, int y);
+	void setCell(int x, int y, int z);
+	void setSolCell(int x, int y, int z);
 };
