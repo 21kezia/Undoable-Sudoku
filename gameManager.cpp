@@ -1,4 +1,4 @@
-#include "GameManager.h"
+#include "gameManager.h"
 
 GameManager::GameManager(Board* board, Player* player)
 {
