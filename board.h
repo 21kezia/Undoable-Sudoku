@@ -1,4 +1,4 @@
-#include "Helper.h"
+#include "helper.h"
 #define GRID_SIZE 9
 
 //const int GRID_SIZE = 9;
