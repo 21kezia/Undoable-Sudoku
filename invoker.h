@@ -1,6 +1,6 @@
 #pragma once
-#include "Helper.h"
-#include "Command.h"
+#include "helper.h"
+#include "command.h"
 
 class Invoker
 {
