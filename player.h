@@ -1,21 +1,16 @@
 #pragma once
-#include <iostream>
-#include <string>
-using namespace std;
+#include "Helper.h"
 
-class player
+class Player
 {
+private:
 	string username;
-	int matchCount;
-	int winCount;
-	
+	int score;
 public:
-	player();
-	player(string username, int MatchCount, int WinCount);
-	void setMatchCount(int match);
-	int getMatchCount();
-	void setUsername(string name);
+	Player();
+	~Player() = default;
+	void setUsername(string username);
+	void setScore(int score);
 	string getUsername();
-	void setWinCount(int winCount);
-	int getWinCount();
+	int getScore();
 };
