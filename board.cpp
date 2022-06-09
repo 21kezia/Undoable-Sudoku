@@ -81,7 +81,7 @@ vector<bool> Board::getRegionPossibilities(int i, int j) {
 	return output;
 }
 
-vector<bool> Board::getColPossibilites(int j) {
+vector<bool> Board::getColPossibilities(int j) {
 	vector<bool> output(9, true);
 	for (int i = 0; i < GRID_SIZE; ++i) {
 		if (this->grid[i][j] != 0)
