@@ -9,7 +9,7 @@ private:
 	bool nInCol(int n, int j);
 
 	vector<bool> getRegionPossibilities(int i, int j);
-	vector<bool> getColPossibilites(int j);
+	vector<bool> getColPossibilities(int j);
 	vector<bool> getRowPossibilities(int i);
 
 	void setCellSolved(int i, int j, int n);
